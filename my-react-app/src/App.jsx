@@ -9,6 +9,12 @@ import Props from './props.jsx';
 import Conditionalrendering from './conditionalrendering.jsx';
 import RenderList from './renderList.jsx';
 import Button  from './Button.jsx';
+import UseStateExample from './usestate.jsx';
+import MyComponent from './onchange.jsx';
+import EffectDemo from './useeffect.jsx';
+import UserProfile from './usecontextcomponent2.jsx';
+import { UserProvider } from './usecontextcomponent1.jsx';
+import UseRefDemo from './useref.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +22,15 @@ function App() {
   return (
     <>
       <div>
+      <MyComponent />
       <Card />
+      <UseStateExample />
+      <EffectDemo />
+      <UserProvider>
+      <h3 className="text-center mt-3">🔗 useContext Hook Demo</h3>
+      <UserProfile />
+      </UserProvider>
+      <UseRefDemo />
       <Button />
       <Props name="John Doe" age={30} city="New York" />
       <Props />
