@@ -2,35 +2,6 @@
 
 A structured guide covering everything in React — from fundamentals to Next.js ecosystem.
 
----
-
-## 🧩 1️⃣ Core React Fundamentals
-
-The foundation — everything React is built on.
-
-JSX  
-Components (Function, Class)  
-Props & Prop Drilling  
-State (useState, setState)  
-Rendering & Re-rendering  
-Virtual DOM & Reconciliation  
-Keys in lists  
-Conditional Rendering (&&, ternary, early return)  
-Event Handling (onClick, onChange, etc.)  
-Fragment (<> </>)  
-React.StrictMode  
-Controlled vs Uncontrolled Components
-
----
-
-## ⚙️ 2️⃣ React Component Lifecycle
-
-How React mounts, updates, and unmounts components.
-
-Lifecycle Phases:  
-Mounting (constructor, componentDidMount)
-
----
 
 ## 🧩 1️⃣ Core React Fundamentals
 

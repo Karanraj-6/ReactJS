@@ -40,8 +40,7 @@ state and side effects, making them capable of handling tasks that were previous
 
 ## COMPLETE INTERNAL FLOW OF CLASS COMPONENT STATE IN REACT
     Let’s start with a normal class component:
-```
-class ClassComponent extends React.Component {
+```class ClassComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { counter: 0, name: "Karan" };
