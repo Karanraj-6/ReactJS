@@ -349,7 +349,7 @@ React processes them during the render phase, updates the Fiber tree, then commi
 _reactInternals links your component instance to its Fiber representation.
 
 ### Extra resource for visual daigram [blog]:
-![blog](https://www.edureka.co/blog/react-components/)
+https://www.edureka.co/blog/react-components/
 
 
 
