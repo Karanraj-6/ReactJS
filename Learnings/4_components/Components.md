@@ -79,7 +79,8 @@ Here, this.state is an object, and React adds special internal properties to man
   render: f,                  // Render method defined by user
   setState: f,                // Bound version of enqueueSetState
   forceUpdate: f,             // Forces re-render (rarely used)
-};```
+};
+```
 (OR)
 
 React calls new ClassComponent(props).
@@ -101,7 +102,8 @@ So your component instance (this) in memory looks like:
   refs: {},
   context: undefined,
   isReactComponent: {}
-};```
+};
+```
 
 ## Understanding this.state
 At the component level:
@@ -111,7 +113,8 @@ It looks like a plain object — and it is, from your perspective.
 But React also stores a mirrored copy in its Fiber system, where it becomes:
 
 ```fiber.memoizedState = { counter: 0, name: "Karan" };
-fiber.updateQueue.baseState = { counter: 0, name: "Karan" };```
+fiber.updateQueue.baseState = { counter: 0, name: "Karan" };
+```
 
 
 That means:
@@ -141,7 +144,8 @@ Roughly:
   },
   lanes: 0,
   childLanes: 0
-};```
+};
+```
 
 
 And this Fiber node is linked back to your component via:
@@ -158,7 +162,8 @@ Your instance also gets an internal property:
   enqueueSetState: function(inst, payload, callback, callerName) { ... },
   enqueueForceUpdate: function() { ... },
   enqueueReplaceState: function() { ... }
-};```
+};
+```
 
 This object is React’s internal bridge between your setState() call and the Fiber scheduler.
 
@@ -182,7 +187,8 @@ const update = {
   eagerState: null,
   eagerReducer: null,
   next: null
-};```
+};
+```
 
 - It adds that update to the update queue of the fiber:
 
@@ -214,12 +220,10 @@ while (update !== null) {
 }
 
 // newState = { counter: 1, name: "Karan" }
-
 ```
 
 Then React updates:
-```
-fiber.memoizedState = newState;
+```fiber.memoizedState = newState;
 fiber.updateQueue.baseState = newState;
 ```
 
@@ -232,8 +236,7 @@ Next, React calls your render() method again with the updated state:
 ```render() → <div>Counter: 1</div>```
 
 React compares this new virtual DOM with the old one:
-```
-<div>Counter: 0</div>
+```<div>Counter: 0</div>
 <div>Counter: 1</div>
 ```
 
@@ -250,8 +253,7 @@ Runs ```componentDidUpdate()``
 Flushes effects (useEffect equivalents in class: componentDidMount, etc.)
 
 Now:
-```
-this.state = { counter: 1, name: "Karan" }
+```this.state = { counter: 1, name: "Karan" }
 fiber.memoizedState = { counter: 1, name: "Karan" }
 fiber.updateQueue.baseState = { counter: 1, name: "Karan" }
 ```
@@ -272,8 +274,7 @@ Updates Fiber + UI again.
 
 Here’s a realistic representation of your class instance in memory:
 
-```
-this = {
+```this = {
   props: { ... },
   state: { counter: 1, name: "Karan" },
   updater: {
