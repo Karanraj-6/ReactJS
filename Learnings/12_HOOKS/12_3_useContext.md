@@ -81,3 +81,5 @@ In this example, the `Counter` component uses the `useState` hook to manage the 
 ### Summary
 The `useContext` hook is a powerful tool in React for accessing context values within functional components. It helps to avoid prop drilling and allows for easier management of global state or configurations. By combining `useContext` with `useState`, you can create dynamic contexts that can be updated by consuming components, enhancing the interactivity of your React applications.
 In summary, the `useContext` hook provides a straightforward way to consume context values in functional components, promoting cleaner and more maintainable code in React applications.
+
+
