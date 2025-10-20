@@ -338,5 +338,5 @@ Metadata & SEO
 Dynamic imports  
 Streaming & Suspense boundaries  
 App router concepts (2025 style)
-
 ---
+
